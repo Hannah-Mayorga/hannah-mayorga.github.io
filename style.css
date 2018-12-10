@@ -1,6 +1,62 @@
-.flex-container{
+/* Classes */
+.flex-nav{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
  
+}
+.flex-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.carousel{
+    width: 50%;
+}
+.about-box{
+    border: 3px black solid;
+}
+.display-4 {
+    font-size: 150%;
+}
+/* All Id's */
+#profile {
+    background: url(resources/profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: 1;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+#github {
+    background: url(resources/githubIcon.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: 1;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+#linkedin {
+    background: url(resources/linkedinIcon2.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: 1;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+#discord {
+    background: url(resources/discord-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    z-index: 1;
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
 }
