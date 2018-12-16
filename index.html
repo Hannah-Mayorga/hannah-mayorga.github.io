@@ -5,147 +5,373 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <!-- INCLUDE ALL FOUR BOOTSTRAP LINKS-->
     <link rel="stylesheet" href='style.css'>
+    <link rel="javascript" href="brains.js">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Hannah Mayorga</title>
 </head>
+<!--All Script-->
+<script>
+    // Resume Section 
+    $(document).ready(function () {
+        $("#qdoba-flip").click(function () {
+            $("#qdoba-panel").slideToggle("slow");
+        });
+    });
+    $(document).ready(function () {
+        $("#nextech-flip").click(function () {
+            $("#nextech-panel").slideToggle("slow");
+        });
+    });
+    $(document).ready(function () {
+        $("#park-flip").click(function () {
+            $("#park-panel").slideToggle("slow");
+        });
+    });
+    $(document).ready(function () {
+        $("#teenworks-flip").click(function () {
+            $("#teenworks-panel").slideToggle("slow");
+        });
+    });
+    // Hiding
+    // If about is clicked -> show about, hide contact + port 
+    // If port is clicked -> show port, hide about + conact
+    // If contact is clicked -> show contact, hide port + about
+    // If logo is clicked -> show all
+
+    // About
+    $(document).ready(function () {
+        $("#home-about").click(function () {
+            $("#about").show(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-about").click(function () {
+            $("#portfolio").hide(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-about").click(function () {
+            $("#contact").hide(1000);
+        });
+    });
+    // Portfolio
+    $(document).ready(function () {
+        $("#home-portfolio").click(function () {
+            $("#portfolio").show(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-portfolio").click(function () {
+            $("#about").hide(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-portfolio").click(function () {
+            $("#contact").hide(1000);
+        });
+    });
+    // Contact 
+    $(document).ready(function () {
+        $("#home-contact").click(function () {
+            $("#contact").show(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-contact").click(function () {
+            $("#about").hide(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-contact").click(function () {
+            $("#portfolio").hide(1000);
+        });
+    });
+    // Logo
+    $(document).ready(function () {
+        $("#home-logo").click(function () {
+            $("#contact").show(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-logo").click(function () {
+            $("#about").show(1000);
+        });
+    });
+    $(document).ready(function () {
+        $("#home-logo").click(function () {
+            $("#portfolio").show(1000);
+        });
+    });
+</script>
 
 <body>
-
-    <div class="container">
-        <header class="jumbotron text-center">
-            <div id="profile"></div>
-            <h1>HANNAH MAYORGA</h1>
-            <small>Future Web & Game Developer</small>
-            <nav class="flex-nav">
-                <div>
-                    <img src="resources/about-icon.png">
-                </div>
-                <div>
-                    <img src="resources/portfolio-icon.png">
-                </div>
-                <div>
-                    <img src="resources/contact-icon.png">
-                </div>
-            </nav>
-    </div>
+    <!--Header-->
+    <header class="jumbotron text-center" id="header">
+        <div class="profile"></div>
+        <h1 class="display-1">HANNAH MAYORGA</h1>
+        <h2 class=" ">Future Web & Game Developer</h2>
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top justify-content-center">
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img id="home-logo" src="resources/logo.png" alt="Logo" style="width:40px;">
+                </a>
+                <li class="nav-item">
+                    <a id="home-about" class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a id="home-portfolio" class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a id="home-contact" class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
 
     <!--About-->
-    <section>
-        <!--Carousel-->
-        <article class='carousel slide container' id='pictures' data-ride='carousel'>
-            <ul class='carousel-indicators'>
-                <li data-target='#pictures' data-slide-to='0' class='active'></li>
-                <li data-target='#pictures' data-slide-to='1'></li>
-                <li data-target='#pictures' data-slide-to='2'></li>
-            </ul>
+    <section id="about">
+        <div class="flex-about">
+            <article class="about-box" style="width: 73%">
+                <div>
+                    <img src="resources/about-picture.png" style="padding-left: 5%">
+                </div>
+                <div class="container">
+                    <!--Nav Pills-->
+                    <br>
+                    <div class=" justify-content-lg-center about-nav">
+                        <ul class="nav nav-pills nav-justified" role="tablist">
+                            <li class="nav-item ">
+                                <a class="nav-link btn  " data-toggle="pill" href="#about-me">About Me</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link btn" data-toggle="pill" href="#resume">Resume</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Tabs-->
+                    <div class="tab-content about-content">
+                        <!--About-->
+                        <div id="about-me" class="container tab-pane fade "><br>
+                            <h5 class="display-3">About Me</h5>
+                            <h4>Who am I?</h4>
+                            <p>My name is Hannah Mayorga and I'm currently a Senior
+                                at Warren Central High School. I plan on attending the
+                                IUPUI School of Informatics and Computing in the Fall of 2019.
+                                My goal is to major in Web Development and Design. I'd also like
+                                to take classes revolving around Game Design and 3D Animation as well.
+                                I plan on becoming a Web Developer / Game Designer in the future.
+                            </p>
+                            <h4>Skills</h4>
+                            <ul id="skills">
+                                <li>
+                                    HTML : <div class="progress" style="height: 5px;">
+                                        <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                            role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 90%">
 
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="resources/placeholder.jpg" alt="" width="100%">
-                </div>
-                <div class="carousel-item">
-                    <img src="resources/placeholder.jpg" alt="" width="100%">
-                </div>
-                <div class="carousel-item ">
-                    <img src="resources/placeholder.jpg" alt="" width="100%">
-                </div>
-            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    CSS : <div class="progress" style="height: 5px;">
+                                        <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                            role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 80%">
 
-            <a class="carousel-control-prev" href="#pictures" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#pictures" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-            <!--About/Resume-->
-        </article>
-        <article class="text-center about-box">
-            <img>
-            <ul class="nav nav-pills" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="pill" href="#about">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="pill" href="#resume">Resume</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <!--About-->
-                <div id="about" class="container tab-pane active"><br>
-                    <h3>ABOUT ME</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-                <!--Resume-->
-                <div id="resume" class="container tab-pane fade"><br>
-                    <h3>Resume</h3>
-                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-        </article>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    JavaScript : <div class="progress" style="height: 5px;">
+                                        <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                            role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 35%">
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    Java : <div class="progress" style="height: 5px;">
+                                        <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                            role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 50%">
+
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    Maya / Blender : <div class="progress" style="height: 5px;">
+                                        <div class="progress-bar progress-bar-striped bg-info progress-bar-animated"
+                                            role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                                            style="width: 20%">
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Resume-->
+                        <div id="resume" class="container tab-pane fade"><br>
+                            <h5 class="display-3">Resume</h5>
+                            <p><em>Promise Statement: Excellent worker who is able to effectively and efficiently
+                                    complete task</em></p>
+                            <div id="qdoba-flip" class="co-name">Qdoba</div>
+                            <div id="qdoba-panel" class="co-desc">
+                                NOV 2018 - PRESENT, INDIANAPOLIS EAST WASHINGTON STREET <br>
+                                Fast casual food service that serves Mexican style cusine.
+                            </div>
+                            <br>
+                            <div id="nextech-flip" class="co-name">Nextech</div>
+                            <div id="nextech-panel" class="co-desc">
+                                JUNE 2018 - PRESENT, INDIANAPOLIS SPEAKEASY <br>
+                                Professional summer internship that taught the basics of HTML,
+                                CSS, and JavaScript in a three-week coding bootcamp taught at Kenize.
+                            </div>
+                            <br>
+                            <div id="park-flip" class="co-name">Christian Park</div>
+                            <div id="park-panel" class="co-desc">
+                                AUGUST 2017 - OCT 2018, 4200 ENGLISH AVE <br>
+                                Part of Teenworks Pro Employment. Worked alongside children at a community park.
+                                Taught two different programs. One teaching the basics of art to children, the other
+                                teaching
+                                the basics of coding to children. Both programs were a success.
+                            </div>
+                            <br>
+                            <div id="teenworks-flip" class="co-name">Teenworks</div>
+                            <div id="teenworks-panel" class="co-desc">
+                                JUNE 2017 - PRESENT, IVY TECH <br>
+                                Professional development program that taught various children about personal
+                                growth. Program also provided students with jobs during the summer, then moved on to
+                                place the best students from the program into a year-round job placement.
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+            </article>
+        </div>
     </section>
     <br>
     <!--Portfolio-->
-    <section>
-        <article class="container-fluid">
+    <section id="portfolio">
+        <article class="container">
             <div class="card-columns">
                 <div class="card" style="width:350px">
-                    <img class="card-img-top" src="resources/placeholder.jpg" alt="Card image" style="width:100%">
+                    <div class="card-img-top">
+                        <iframe width="350" height="175" src="https://hannah-mayorga.github.io/Kenzie-Nextech-Project/tic-tac-toe/index.html">
+                            <!DOCTYPE html>
+                            <html lang="en">
+
+                            <head>
+                                <meta charset="UTF-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                                <link rel="stylesheet" src="tic-tac-toe.css">
+                                <title>Tic-Tac-Toe</title>
+                            </head>
+
+                            <body>
+                                <table class="grad">
+                                    <tr>
+                                        <td id="1"></td>
+                                        <td id="2"></td>
+                                        <td id="3"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="4"></td>
+                                        <td id="5"></td>
+                                        <td id="6"></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="7"></td>
+                                        <td id="8"></td>
+                                        <td id="9"></td>
+                                    </tr>
+                                </table>
+                                <script src="tic-tac-toe.js" type="text/javascript"></script>
+                            </body>
+                            </html>
+                        </iframe>
+                    </div>
                     <div class="card-body">
-                        <h4 class="card-title">Project</h4>
-                        <p class="card-text">Some example text some example text.</p>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
+                        <h4 class="card-title">Tic-Tac-Toe</h4>
+                        <p class="card-text">[Playable] July 2018</p>
+                        <a href="#" data-toggle="modal" data-target="#myModal" class="btn btn-primary">View More</a>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Tic-Tac-Toe</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p>This program was made during my internship at Nextech. It was my first game made in 
+                                        JavaScript. I used CSS techniques to give it some "flare". 
+                                        You can visit the site <a href="https://hannah-mayorga.github.io/Kenzie-Nextech-Project/tic-tac-toe/index.html" target="_blank">here</a>.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 <div class="card" style="width:350px">
                     <img class="card-img-top" src="resources/placeholder.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <h4 class="card-title">Project</h4>
-                        <p class="card-text">Some example text some example text.</p>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
+                        <h4 class="card-title">Connect Four</h4>
+                        <p class="card-text">[Playable] July 2018</p>
+                        <a href="#" class="btn btn-primary">View More</a>
                     </div>
                 </div>
                 <div class="card" style="width:350px">
                     <img class="card-img-top" src="resources/placeholder.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <h4 class="card-title">Project</h4>
-                        <p class="card-text">Some example text some example text.</p>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
+                        <h4 class="card-title">Advanced CSS Practice Page</h4>
+                        <p class="card-text">October 2018</p>
+                        <a href="#" class="btn btn-primary">View More</a>
                     </div>
                 </div>
                 <div class="card" style="width:350px">
                     <img class="card-img-top" src="resources/placeholder.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <h4 class="card-title">Project</h4>
-                        <p class="card-text">Some example text some example text.</p>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
+                        <h4 class="card-title">Bootstrap 4 Practice Page</h4>
+                        <p class="card-text">November 2018</p>
+                        <a href="#" class="btn btn-primary">View More</a>
                     </div>
                 </div>
                 <div class="card" style="width:350px">
                     <img class="card-img-top" src="resources/placeholder.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <h4 class="card-title">Project</h4>
-                        <p class="card-text">Some example text some example text.</p>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
+                        <h4 class="card-title">CSS Practice Page</h4>
+                        <p class="card-text">September 2018</p>
+                        <a href="#" class="btn btn-primary">View More</a>
                     </div>
                 </div>
                 <div class="card" style="width:350px">
                     <img class="card-img-top" src="resources/placeholder.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <h4 class="card-title">Project</h4>
-                        <p class="card-text">Some example text some example text.</p>
-                        <a href="#" class="btn btn-primary">Visit Site</a>
+                        <h4 class="card-title">HTML Practice Page</h4>
+                        <p class="card-text">August 2018</p>
+                        <a href="#" class="btn btn-primary">View More</a>
                     </div>
                 </div>
             </div>
@@ -153,26 +379,28 @@
     </section>
 
     <!--Contact-->
-    <section>
+    <footer id="contact">
         <h1 class="text-center">Contact Me</h1>
         <article class="flex-social">
             <div id="github">
-                
+                <a href="https://github.com/Hannah-Mayorga" target="_blank">
+                    <img src="resources/github-icon.png">
+                </a>
             </div>
             <div id="linkedin">
-               
+                <a href="https://www.linkedin.com/in/hannah-m-1a6a05126/" target="_blank">
+                    <img src="resources/linkedin-icon.png">
+                </a>
             </div>
             <div id="discord">
-               
+                <a href="https://www.instagram.com/hannah.banna.bread/" target="_blank">
+                    <img src="resources/instagram-icon.png">
+                </a>
             </div>
         </article>
         <br>
         <p class="display-4 text-center">email: hannahsmayorga@gmail.com</p>
         <p class="display-4 text-center">phone: 317.435.1211</p>
-    </section>
-
-    <footer>
-
     </footer>
 
 </body>

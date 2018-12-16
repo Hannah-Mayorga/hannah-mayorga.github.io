@@ -1,62 +1,90 @@
-/* Classes */
-.flex-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
- 
+body {
+    background-color: #fde7f9;
+    background-image: linear-gradient(to top, #fde7f9 0%, #aacaef 74%);
+    font-family: 'Patrick Hand', cursive;
+    font-size: 100%;
+
 }
-.flex-social {
+/* Header */
+.jumbotron {
+    background-image: url(resources/backdrop.jpg);
+    background-size: 100% 100%;
+    height: calc(50%);
+    padding-top: 11%;
+    padding-bottom: 11%;
+}
+.profile {
+    background: url(resources/profile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    margin: auto;
+    margin-bottom: 15px;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 5px solid lightcyan;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75)
+}
+/* About */
+.carousel {
+    width: 75%;
+}
+.about-box {  
     display: flex;
-    flex-direction: row;
+    border: 3px lightcyan solid;
+    border-radius: 10px;
     justify-content: center;
+    align-items: center;
 }
-.carousel{
-    width: 50%;
+.flex-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.about-box{
-    border: 3px black solid;
+.about-nav {
+    position: initial;
+    margin: 0%;
+    padding: 0px;
+    bottom: 50%;
 }
+.display-3{
+    font-size: 300%;
+}
+.btn{
+    color: #FFFFFF;
+    background-color: #007bff;
+}
+.btn:hover{
+    color: #FFFFFF;
+    background-color: lightskyblue;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-color: transparent;
+
+}
+#skills li {
+    list-style-type: disc;
+}
+/* Resume */
+.co-name {
+    background-color: lightcyan;
+    padding: 5px;
+    text-align: center;
+    border: solid 3px lightcyan;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+.co-desc {
+    text-align: center;
+    display: none;
+  }
+/* Contact */
 .display-4 {
     font-size: 150%;
 }
-/* All Id's */
-#profile {
-    background: url(resources/profile.jpg);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    z-index: 1;
-    margin: auto;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-}
-#github {
-    background: url(resources/githubIcon.png);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    z-index: 1;
-    margin: auto;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-}
-#linkedin {
-    background: url(resources/linkedinIcon2.png);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    z-index: 1;
-    margin: auto;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-}
-#discord {
-    background: url(resources/discord-icon.png);
-    background-repeat: no-repeat;
-    background-size: cover; 
-    z-index: 1;
-    margin: auto;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
+
+.flex-social {
+    display: flex;
+    justify-content: space-evenly;
 }
