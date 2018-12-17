@@ -13,6 +13,9 @@ body {
     padding-top: 11%;
     padding-bottom: 11%;
 }
+.name{
+    color: #362836;
+}
 .profile {
     background: url(resources/profile.jpg);
     background-repeat: no-repeat;
@@ -83,7 +86,6 @@ body {
 .display-4 {
     font-size: 150%;
 }
-
 .flex-social {
     display: flex;
     justify-content: space-evenly;
