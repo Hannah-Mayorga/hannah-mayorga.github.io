@@ -138,8 +138,8 @@
         });
     });
     $(document).ready(function () {
-        $("#instagram").mouseleave(function () {
-            $("#instagram-link").animate({
+        $("#github").mouseleave(function () {
+            $("#github-link").animate({
                 height: '130px',
                 width: '130px'
             });
